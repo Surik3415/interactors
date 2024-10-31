@@ -52,3 +52,17 @@ group :development do
   gem "web-console"
 end
 
+
+gem "tailwindcss-rails", "~> 3.0"
+
+gem "pagy", "~> 9.1"
+
+gem "foreman", "~> 0.88.1"
+
+gem "interactor", "~> 3.1"
+
+gem "rspec", "~> 3.13", :groups => [:development, :test]
+
+gem "rubocop-rails", "~> 2.27", :groups => [:development, :test]
+
+gem "dotenv-rails", "~> 3.1"
