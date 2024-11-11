@@ -55,7 +55,7 @@ end
 
 gem "tailwindcss-rails", "~> 3.0"
 
-gem "pagy", "~> 9.1"
+gem "pagy", "~> 9.2"
 
 gem "foreman", "~> 0.88.1"
 
