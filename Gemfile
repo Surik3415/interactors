@@ -66,3 +66,9 @@ gem "rspec", "~> 3.13", :groups => [:development, :test]
 gem "rubocop-rails", "~> 2.27", :groups => [:development, :test]
 
 gem "dotenv-rails", "~> 3.1"
+
+gem "interactor-rails", "~> 2.2"
+
+gem "pry", "~> 0.14.2"
+
+gem "pry-rails", "~> 0.3.11"

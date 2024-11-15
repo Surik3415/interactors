@@ -19,20 +19,22 @@ class PostsController < ApplicationController
   def edit
   end
 
-  # POST /posts or /posts.json
   def create
-    @post = Post.new(post_params)
-
+    @interactor = CreatePostInteractor.call(params: post_params)
+  
     respond_to do |format|
-      if @post.save
-        format.html { redirect_to @post, notice: "Post was successfully created." }
-        format.json { render :show, status: :created, location: @post }
+      if @interactor.success?
+        format.html { redirect_to @interactor.post, notice: "Post was successfully created." }
+        format.json { render :show, status: :created, location: @interactor.post }
       else
+        @post = Post.new(post_params)
+        @post.errors.merge!(@interactor.errors)
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.json { render json: @interactor.errors, status: :unprocessable_entity }
       end
     end
   end
+  
 
   # PATCH/PUT /posts/1 or /posts/1.json
   def update
