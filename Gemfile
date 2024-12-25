@@ -63,7 +63,7 @@ gem "interactor", "~> 3.1"
 
 gem "rspec", "~> 3.13", :groups => [:development, :test]
 
-gem "rubocop-rails", "~> 2.27", :groups => [:development, :test]
+gem "rubocop-rails", "~> 2.28", :groups => [:development, :test]
 
 gem "dotenv-rails", "~> 3.1"
 
